@@ -1,7 +1,7 @@
 import os
 
 image_files = []
-os.chdir("/darknet/data/obj"))
+os.chdir("/darknet/data/obj")
 for filename in os.listdir(os.getcwd()):
     if filename.endswith(tuple([".jpg", "JPG"])):
         image_files.append("/darknet/data/obj/" + filename)
