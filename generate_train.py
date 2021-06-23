@@ -1,10 +1,10 @@
 import os
 
 image_files = []
-os.chdir(os.path.join("data", "obj"))
+os.chdir("/darknet/data/obj"))
 for filename in os.listdir(os.getcwd()):
-    if filename.endswith(".jpg", "JPG"):
-        image_files.append("data/obj/" + filename)
+    if filename.endswith(tuple([".jpg", "JPG"])):
+        image_files.append("/darknet/data/obj/" + filename)
 os.chdir("..")
 with open("train.txt", "w") as outfile:
     for image in image_files:
