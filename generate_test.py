@@ -1,10 +1,10 @@
 import os
 
 image_files = []
-os.chdir(os.path.join("data", "test"))
+os.chdir("/darknet/data/test")
 for filename in os.listdir(os.getcwd()):
-    if filename.endswith(".jpg", ".JPG"):
-        image_files.append("data/test/" + filename)
+    if filename.endswith(tuple([".jpg", ".JPG"])):
+        image_files.append("/darknet/data/test/" + filename)
 os.chdir("..")
 with open("test.txt", "w") as outfile:
     for image in image_files:
